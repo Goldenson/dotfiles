@@ -1,0 +1,54 @@
+set guioptions-=T
+
+color molokai
+set guifont=Monaco:h11.00
+set wildmenu
+
+function! InsertStatuslineColor(mode)
+  if a:mode == 'i'
+    hi statusline guibg=magenta
+  elseif a:mode == 'r'
+    hi statusline guibg=blue
+  else
+    hi statusline guibg=red
+  endif
+endfunction
+
+au InsertEnter * call InsertStatuslineColor(v:insertmode)
+au InsertLeave * hi statusline guibg=green
+
+" default the statusline to green when entering Vim
+hi statusline guibg=green
+
+" strip trailing whitespace on save
+autocmd BufWritePre * :%s/\s\+$//e
+
+if has("gui_macvim") && has("gui_running")
+  " Command-Shift-F on OSX
+  nmap <D-S-F> :Ack<space>
+endif
+
+nnoremap <silent> <leader>T :ClearCtrlPCache<cr>\|:CtrlP<cr>
+
+" Cutom Max
+nmap 0 ^
+nmap <leader>vr :sp $MYVIMRC<cr>
+nmap <leader>so :source $MYVIMRC<cr>
+runtime macros/matchit.vim
+set nocompatible
+if has("autocmd")
+  filetype indent plugin on
+endif
+" Make CtrlP use ag for listing the files. Way faster and no useless files.
+let g:ctrlp_user_command = 'ag %s -l --hidden --nocolor -g ""'
+let g:ctrlp_use_caching = 0
+let mapleader = "\<Space>"
+nmap <leader>vr :sp $MYVIMRC<cr>
+nmap <leader>so :source $MYVIMRC<cr>
+"Bind `q` to close the buffer for help files
+autocmd Filetype help nnoremap <buffer> q :q<CR>
+" Vroom mappings
+map <Leader>t :TestFile<CR>
+map <Leader>s :TestNearest<CR>
+map <Leader>l :TestLast<CR>
+let test#strategy = 'vimux'
