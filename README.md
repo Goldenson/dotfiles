@@ -16,3 +16,5 @@ git clone git://github.com/tpope/rbenv-ctags.git \
 10. go to your project, `rbenv ctags`
 11. Try in install automatic ctags http://tbaggery.com/2011/08/08/effortless-ctags-with-git.html
 12. https://github.com/zsh-users/zsh-autosuggestions
+
+13. install git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
