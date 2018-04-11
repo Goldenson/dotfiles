@@ -1,0 +1,9 @@
+[color]
+  ui = true
+
+[user]
+  name = goldenson
+  email = orefice.maxime@gmail.com
+[alias]
+  untrack = clean -f -d
+  reset = reset --hard
