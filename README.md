@@ -1,8 +1,9 @@
-# dotfiles
-My :+1: dotiles
+# 📝  Dotfiles
+
+Personal dotfiles and scripts.
 
 ## Install vim ruby plugin with janus
-1. git clone git@github.com:Goldenson/dotfiles.git
+1. git clone git@github.com:goldenson/dotfiles.git
 2. `ln -s /Users/Maxore/dotfiles/janus/ ~/.janus`
 3. `ln -s /Users/Maxore/dotfiles/tmux.conf ~/.tmux.conf`
 4. `brew tap Goles/battery && brew install battery`
