@@ -104,6 +104,7 @@ alias ffs="dev down && dev up && dev server"
 alias kill_ruby="ps ax | grep -i ruby | awk '{ print $1 }' | xargs kill -9"
 alias kill_rails="ps ax | grep -i rails | awk '{ print $1 }' | xargs kill -9"
 alias git_clean="git branch --merged master | grep -v 'master\|*' | xargs -n 1 git branch -d;"
+alias credentials="EDITOR='code --wait' bin/rails credentials:edit"
 
 [ -f /opt/dev/dev.sh ] && source /opt/dev/dev.sh
 

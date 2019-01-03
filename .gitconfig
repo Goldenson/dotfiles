@@ -1,9 +1,12 @@
-[color]
-  ui = true
-
 [user]
-  name = goldenson
-  email = orefice.maxime@gmail.com
+  name = Maxime Orefice
+	email = orefice.maxime@gmail.com
 [alias]
-  untrack = clean -f -d
-  reset = reset --hard
+	uncommit = reset --soft HEAD^
+	unstage = reset
+	staged = diff --cached
+	ctags = "!.git/hooks/ctags"
+[diff]
+	algorithm = patience
+[protocol]
+	version = 2
