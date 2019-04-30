@@ -103,6 +103,7 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="code ~/.zshrc"
 alias create_orders="bin/rake dev:orders:create SHOP_ID=1 NUM=1"
+alias create_products="bin/rake dev:orders:products SHOP_ID=1 NUM=2"
 alias elasticsearch="bin/rake elasticsearch:drop elasticsearch:reindex"
 alias ffs="dev down && dev up && dev server"
 alias kill_ruby="ps ax | grep -i ruby | awk '{ print $1 }' | xargs kill -9"
