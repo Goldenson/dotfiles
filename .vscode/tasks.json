@@ -1,0 +1,26 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+        "label": "Run this test",
+        "type": "shell",
+        "command": "source /opt/dev/dev.sh && dev test ${file}:${lineNumber}",
+        "presentation": {
+            "clear": true
+        },
+        "problemMatcher": []
+    },
+    {
+        "label": "Run test file",
+        "type": "shell",
+        "command": "source /opt/dev/dev.sh && dev test ${file}",
+        "group": {
+            "kind": "test",
+            "isDefault": true
+        },
+        "presentation": {
+            "clear": true
+        }
+    }
+]
+}
